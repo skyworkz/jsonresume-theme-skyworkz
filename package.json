@@ -10,5 +10,12 @@
   "license": "MIT",
   "dependencies": {
     "handlebars": "^2.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "resume-cli": "^3.0.8"
+  },
+  "scripts": {
+    "serve": "resume serve --theme .",
+    "export:pdf": "resume export --theme . --format pdf resume.pdf"
   }
 }

@@ -2,6 +2,11 @@ var fs = require("fs");
 var path = require('path');
 var Handlebars = require("handlebars");
 
+Handlebars.registerHelper("network-fa-icon", function(context, options) {
+	if (!context) return '';
+	return '<i class="fa-brands fa-' + context.toLowerCase() + '"></i>';
+});
+
 function render(resume) {
 	var css = fs.readFileSync(__dirname + "/style.css", "utf-8");
 	var tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");

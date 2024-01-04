@@ -1,90 +1,92 @@
 {{#resume.basics}}
-	<h1>{{name}}</h1>
-	<h2>{{label}}</h2>
-	<section id="basics">
-		<div class="contact">
-		{{#if website}}
-		<div class="website">
-			<strong>Website</strong>
-			{{website}}
+<div id="basics">
+	<div class="profile-card">
+		{{#if image}}
+		<div class="d-flex justify-content-center">
+			<img class="profile-pic my-4" data-src="{{image}}"
+					alt="{{name}}"
+					src="{{image}}"
+					itemprop="image">
 		</div>
 		{{/if}}
-		{{#if email}}
-		<div class="email">
-			<strong>Email</strong>
-			{{email}}
-		</div>
-		{{/if}}
-		{{#if phone}}
-		<div class="phone">
-			<strong>Phone</strong>
-			{{phone}}
-		</div>
-		{{/if}}
-		</div>
-		{{#if summary}}
-		<div class="summary">
-			<p>{{summary}}</p>
-		</div>
-		{{/if}}
-		{{#location}}
-		<h3>Location</h3>
-		<section id="location">
-			{{#if address}}
-			<div class="address">
-				<strong>Address</strong>
-				{{address}}
+		<h1 class="text-center">{{name}}</h1>
+		<h2 class="text-center">{{label}}</h2>
+		<hr>
+		<section class="px-4 py-3">
+			<div class="contact">
+			{{#if url}}
+			<div class="website">
+				<i class="fa-solid fa-link me-3"></i>
+				<a href="{{url}}" target="_blank">
+					{{url}}
+				</a>
 			</div>
 			{{/if}}
-			{{#if postalCode}}
-			<div class="postalCode">
-				<strong>Postal code</strong>
-				{{postalCode}}
+			{{#if email}}
+			<div class="email">
+				<i class="fa-solid fa-envelope me-3"></i>
+				{{email}}
 			</div>
 			{{/if}}
-			{{#if city}}
-			<div class="city">
-				<strong>City</strong>
-				{{city}}
+			{{#if phone}}
+			<div class="phone">
+				<i class="fa-solid fa-phone me-3"></i>
+				{{phone}}
 			</div>
 			{{/if}}
-			{{#if countryCode}}
-			<div class="countryCode">
-				<strong>Country code</strong>
-				{{countryCode}}
 			</div>
-			{{/if}}
-			{{#if region}}
-			<div class="region">
-				<strong>Region</strong>
-				{{region}}
-			</div>
+			{{#location}}
+			<h3 class="mt-4 mb-0">
+				<i class="fa-solid fa-location-dot me-2"></i>
+				Location
+			</h3>
+			<hr class="mt-2">
+			<section id="location">
+				{{#if address}}
+					{{address}},
+				{{/if}}
+				{{#if postalCode}}
+					{{postalCode}},
+				{{/if}}
+				{{#if city}}
+					{{city}},
+				{{/if}}
+				<div class="clearfix" />
+				{{#if region}}
+					{{region}},
+				{{/if}}
+				{{#if countryCode}}
+					{{countryCode}}
+				{{/if}}
+			</section>
+			{{/location}}
+			{{#if profiles.length}}
+			<h3 class="mt-4 mb-0">
+				<i class="fa-solid fa-globe me-2"></i>
+				Profiles
+			</h3>
+			<hr class="mt-2">
+			<section id="profiles">
+				<div class="d-flex justify-content-center">
+					{{#each profiles}}
+						<div class="item">
+							{{#if network}}
+								<a class="d-block text-center" href="{{url}}" target="_blank">
+									{{#network-fa-icon network}}{{/network-fa-icon}}
+								</a>
+							{{/if}}
+							{{#if username}}
+								<a class="d-block text-center" href="{{url}}" target="_blank">
+									{{username}}
+								</a>
+							{{/if}}
+							</a>
+						</div>
+					{{/each}}
+				</div>
+			</section>
 			{{/if}}
 		</section>
-		{{/location}}
-		{{#if profiles.length}}
-		<h3>Profiles</h3>
-		<section id="profiles">
-			{{#each profiles}}
-			<div class="item">
-				{{#if network}}
-				<strong class="network">
-					{{network}}
-				</strong>
-				{{/if}}
-				{{#if username}}
-				<div class="username">
-					{{username}}
-				</div>
-				{{/if}}
-				{{#if url}}
-				<div class="url">
-					<a href="{{url}}">Link</a>
-				</div>
-				{{/if}}
-			</div>
-			{{/each}}
-		</section>
-		{{/if}}
-	</section>
+		</div>
+	</div>
 {{/resume.basics}}
