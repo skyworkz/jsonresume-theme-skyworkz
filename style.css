@@ -26,12 +26,13 @@ body {
 	background: rgb(240, 240, 240);
 	font: 18px "Proxima Nova Regular", sans-serif;
 	color: rgb(14, 21, 57);
-	font-weight: 400;
-	line-height: 36px;
-	margin-bottom: 100px;
 }
 
-h1, h2, h3 {
+p {
+	line-height: 30px;
+}
+
+h1, h2, h3, h4, h5 {
 	font-family: "Proxima Nova Semibold",  sans-serif;
 	color: rgb(14, 21, 57);
 	font-smooth: always;
@@ -57,6 +58,18 @@ h3 {
 	color: rgb(75, 87, 145)
 }
 
+h4 {
+	font-size: 19px;
+	line-height: 27px;
+	color: rgb(75, 87, 145)
+}
+
+h5 {
+	font-size: 16px;
+	line-height: 24px;
+	color: rgb(75, 87, 145)
+}
+
 #basics {
 	font-size: 16px;
 }
@@ -70,6 +83,7 @@ h3 {
 	font-size: 34px;
 	line-height: 42px;
 	letter-spacing: -1px;
+	color: rgb(75, 87, 145);
 }
 
 #basics h2 {
@@ -78,25 +92,49 @@ h3 {
 	letter-spacing: 0px;
 }
 
+h3 {
+	color: #eb803a;
+}
+
 #profiles a {
 	color: #666;
 	text-decoration: none;
 	min-width: 50px;
 }
+
 #profiles .fa-brands {
 	font-size: 30px;
+	color: rgb(75, 87, 145);
 }
+
 #main h2 {
 	font-size: 24px;
 	line-height: 28px;
+	color: #eb803a;
 }
 
-#main p {
+#main p, #main ul li {
 	color: rgb(14, 21, 57);
-	font-size: 18px;
+	font-size: 16px;
 	font-family: "Proxima Nova Regular", sans-serif;
 	letter-spacing: normal;
-	line-height: 36px;
-	display: block;
 }
 
+
+#main ul li {
+	margin-bottom: 10px;
+}
+
+#work .date .startDate, #work .date .endDate {
+	font-size: 12px;
+	font-weight: 700;
+	background-color: #0000001a;
+}
+
+#skills em {
+	color: rgb(14, 21, 57);
+}
+
+#skills .badge {
+	background-color: rgb(75, 87, 145);
+}

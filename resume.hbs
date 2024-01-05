@@ -29,30 +29,18 @@
 </head>
 
 <body>
-	<div id="resume" class="py-3">
-		<div class="container-fluid">
-			<div class="row">
-				<section class="col-sm-4 col-lg-3 affix">
-					<div class="card p-3">
-					{{> basics }}
-					</div>
-				</section>
-				<section class="col-sm-8 col-lg-9">
-					<div class="card p-3" id="main">
-					{{> basics-summary }}
-					{{> work }}
-					{{> volunteer }}
-					{{> education }}
-					{{> awards }}
-					{{> publications }}
-					{{> skills }}
-					{{> languages }}
-					{{> interests }}
-					{{> references }}
-					</div>
-				</section>
-			</div>
-		</div>
+	<div class="container py-3" id="main">
+			{{> basics }}
+			{{> about }}
+			{{> skills }}
+			{{> work }}
+			{{> volunteer }}
+			{{> education }}
+			{{> awards }}
+			{{> publications }}
+			{{> languages }}
+			{{> interests }}
+			{{> references }}
 	</div>
 </body>
 

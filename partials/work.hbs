@@ -1,56 +1,64 @@
 {{#if resume.work.length}}
 <section id="work">
-	<h2 class="my-4">
-		<i class="fa-regular fa-building me-2"></i>
-		Work
-	</h2>
-	<hr>
-	{{#each resume.work}}
-	<div class="item">
-		{{#if company}}
-		<h3 class="name">
-			{{company}}
+	<div class="card p-3 mb-3">
+		<h3 class="my-0">
+			<i class="fa-regular fa-building me-2"></i>
+			Work
 		</h3>
-		{{/if}}
-		<div class="date">
-			{{#if startDate}}
-			<span class="startDate">
-				{{startDate}}
-			</span>
+		<hr>
+		{{#each resume.work}}
+		<div class="item">
+			<div class="row">
+				<div class="col">
+					{{#if company}}
+						<h4 class="name">
+							{{company}}
+						</h4>
+					{{/if}}
+				</div>
+				<div class="col">
+					<div class="date d-flex justify-content-end">
+						{{#if startDate}}
+						<span class="startDate bg-grey">
+							{{startDate}}
+						</span>
+						{{/if}}
+						{{#if endDate}}
+						<span class="endDate">
+							- {{endDate}}
+						</span>
+						{{else}}
+						<span class="endDate">
+							- Present
+						</span>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+			{{#if position}}
+			<div class="position">
+				{{position}}
+			</div>
 			{{/if}}
-			{{#if endDate}}
-			<span class="endDate">
-				- {{endDate}}
-			</span>
-			{{else}}
-			<span class="endDate">
-				- Present
-			</span>
+			{{#if website}}
+			<div class="website">
+				<a href="{{website}}">{{website}}</a>
+			</div>
+			{{/if}}
+			{{#if summary}}
+			<div class="summary">
+				<p>{{summary}}</p>
+			</div>
+			{{/if}}
+			{{#if highlights.length}}
+			<ul class="highlights">
+				{{#each highlights}}
+				<li>{{.}}</li>
+				{{/each}}
+			</ul>
 			{{/if}}
 		</div>
-		{{#if position}}
-		<div class="position">
-			{{position}}
-		</div>
-		{{/if}}
-		{{#if website}}
-		<div class="website">
-			<a href="{{website}}">{{website}}</a>
-		</div>
-		{{/if}}
-		{{#if summary}}
-		<div class="summary">
-			<p>{{summary}}</p>
-		</div>
-		{{/if}}
-		{{#if highlights.length}}
-		<ul class="highlights">
-			{{#each highlights}}
-			<li>{{.}}</li>
-			{{/each}}
-		</ul>
-		{{/if}}
+		{{/each}}
 	</div>
-	{{/each}}
 </section>
 {{/if}}
