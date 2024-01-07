@@ -1,52 +1,68 @@
 {{#if resume.volunteer.length}}
 <section id="volunteer">
-	<h2>Volunteer</h2>
-	{{#each resume.volunteer}}
-	<div class="item">
-		{{#if organization}}
-		<h3 class="company">
-			{{organization}}
-		</h3>
-		{{/if}}
-		<div class="date">
-			{{#if startDate}}
-			<span class="startDate">
-				{{startDate}}
-			</span>
+	<div class="card p-3 mb-3">
+		<h3 class="my-0">
+				<i class="fa-solid fa-graduation-cap me-2"></i>
+				Volunteer
+			</h3>
+		{{#each resume.volunteer}}
+		<hr>
+		<div class="item">
+			<div class="row">
+					<div class="col">
+						{{#if position}}
+						<h4 class="position">
+							{{position}}
+						</h4>
+						{{/if}}
+					</div>
+					<div class="col">
+						<div class="date d-flex justify-content-end">
+							<div class="badge">
+								<div class="date">
+									{{#if startDate}}
+									<span class="startDate">
+										{{startDate}}
+									</span>
+									{{/if}}
+									{{#if endDate}}
+									<span class="endDate">
+										- {{endDate}}
+									</span>
+									{{else}}
+									<span class="endDate">
+										- Present
+									</span>
+									{{/if}}
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			{{#if organization}}
+			<h5 class="organization">
+				{{organization}}
+			</h5>
 			{{/if}}
-			{{#if endDate}}
-			<span class="endDate">
-				- {{endDate}}
-			</span>
-			{{else}}
-			<span class="endDate">
-				- Present
-			</span>
+			{{#if url}}
+				<div class="website mb-3">
+					<a href="{{url}}" target="_blank">{{url}}</a>
+				</div>
+			{{/if}}
+			{{#if summary}}
+			<p class="summary">
+				{{summary}}
+			</p>
+			{{/if}}
+			{{#if highlights.length}}
+			<ul class="highlights">
+				{{#each highlights}}
+				<li>{{.}}</li>
+				{{/each}}
+			</ul>
 			{{/if}}
 		</div>
-		{{#if position}}
-		<div class="position">
-			{{position}}
+		{{/each}}
 		</div>
-		{{/if}}
-		{{#if website}}
-		<div class="website">
-			<a href="{{website}}">{{website}}</a>
-		</div>
-		{{/if}}
-		{{#if summary}}
-		<div class="summary">
-			<p>{{summary}}</p>
-		</div>
-		{{/if}}
-		{{#if highlights.length}}
-		<ul class="highlights">
-			{{#each highlights}}
-			<li>{{.}}</li>
-			{{/each}}
-		</ul>
-		{{/if}}
-	</div>
-	{{/each}}
 </section>
 {{/if}}

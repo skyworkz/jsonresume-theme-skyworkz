@@ -1,22 +1,35 @@
 {{#if resume.publications.length}}
 <section id="publications">
-	<h2>Publications</h2>
+	<div class="card p-3 mb-3">
+		<h3 class="my-0">
+			<i class="fa-solid fa-pencil me-2"></i>
+			Publications
+		</h3>
+		<hr class="mt-2">
 	{{#each resume.publications}}
 	<div class="item">
-		{{#if name}}
-		<div class="name">
-			{{name}}
-		</div>
+		<div class="row">
+			{{#if name}}
+			<div class="col">
+				<h4 class="name">
+					{{name}}
+				</h4>
+			</div>
+			{{/if}}
+			{{#if releaseDate}}
+			<div class="col">
+				<div class="d-flex justify-content-end">
+					<span class="releaseDate badge">
+						{{releaseDate}}
+					</span>
+				</div>
+			</div>
 		{{/if}}
+		</div>
 		{{#if publisher}}
-		<div class="publisher">
+		<em class="publisher">
 			{{publisher}}
-		</div>
-		{{/if}}
-		{{#if releaseDate}}
-		<div class="releaseDate">
-			{{releaseDate}}
-		</div>
+		</em>
 		{{/if}}
 		{{#if website}}
 		<div class="website">

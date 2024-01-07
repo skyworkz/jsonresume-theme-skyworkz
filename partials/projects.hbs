@@ -1,0 +1,62 @@
+{{#if resume.projects.length}}
+<section id="projects">
+	<div class="card p-3 mb-3">
+		<h3 class="my-0">
+      <i class="fa-solid fa-clipboard-list me-2"></i>
+			Projects
+		</h3>
+		{{#each resume.projects}}
+		<hr>
+		<div class="item">
+			<div class="row">
+				<div class="col">
+					{{#if name}}
+						<h4 class="name">
+							{{name}}
+						</h4>
+					{{/if}}
+				</div>
+				<div class="col">
+					<div class="date d-flex justify-content-end">
+						<div class="badge">
+							{{#if startDate}}
+							<span class="startDate">
+								{{startDate}}
+							</span>
+							{{/if}}
+							{{#if endDate}}
+							<span class="endDate">
+								- {{endDate}}
+							</span>
+							{{else}}
+							<span class="endDate">
+								- Present
+							</span>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+			</div>
+			{{#if url}}
+			<div class="website">
+				<a href="{{url}}" target="_blank">{{url}}</a>
+			</div>
+			{{/if}}
+			{{#if description}}
+			<div class="description mt-3">
+				<p>{{description}}</p>
+			</div>
+			{{/if}}
+			{{#if highlights.length}}
+			<h5>Highlights</h5>
+			<ul class="highlights">
+				{{#each highlights}}
+				<li>{{.}}</li>
+				{{/each}}
+			</ul>
+			{{/if}}
+		</div>
+		{{/each}}
+	</div>
+</section>
+{{/if}}

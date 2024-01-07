@@ -2,34 +2,46 @@
 <section id="awards">
 	<div class="card p-3 mb-3">
 		<h3 class="my-0">
-			<i class="fa-solid fa-code me-2"></i>
+			<i class="fa-solid fa-award me-2"></i>
 			Awards
 		</h3>
 		<hr class="mt-2">
-		{{#each resume.awards}}
-		<div class="item">
-			{{#if title}}
-			<div class="title">
-				{{title}}
-			</div>
-			{{/if}}
-			{{#if date}}
-			<div class="date">
-				{{date}}
-			</div>
-			{{/if}}
-			{{#if awarder}}
-			<div class="awarder">
-				{{awarder}}
-			</div>
-			{{/if}}
-			{{#if summary}}
-			<div class="summary">
-				<p>{{summary}}</p>
-			</div>
-			{{/if}}
+		<div class="row gx-5">
+			{{#each resume.awards}}
+				<div class="col-6">
+					<div class="item">
+						<div class="row">
+								{{#if title}}
+								<div class="col">
+									<div class="title">
+										{{title}}
+									</div>
+								</div>
+								{{/if}}
+								{{#if date}}
+								<div class="col">
+									<div class="d-flex justify-content-end">
+										<span class="date badge">
+											{{date}}
+										</span>
+									</div>
+								</div>
+								{{/if}}
+						</div>
+						{{#if awarder}}
+						<div class="awarder">
+							{{awarder}}
+						</div>
+						{{/if}}
+						{{#if summary}}
+						<div class="summary">
+							<p>{{summary}}</p>
+						</div>
+						{{/if}}
+					</div>
+				</div>
+			{{/each}}
 		</div>
-		{{/each}}
 	</div>
 </section>
 {{/if}}
