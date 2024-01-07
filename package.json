@@ -16,6 +16,7 @@
   },
   "scripts": {
     "serve": "resume serve --theme .",
-    "export:pdf": "resume export --theme . --format pdf resume.pdf"
+    "export:pdf": "resume export --theme . --format pdf resume.pdf",
+    "export:html": "resume export --theme . --format html resume.html"
   }
 }
