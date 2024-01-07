@@ -6,20 +6,20 @@
 			Languages
 		</h3>
 		<hr class="mt-2">
-		{{#each resume.languages}}
-		<div class="item">
-			{{#if language}}
-			<div class="language">
-				{{language}}
+		<div class="row">
+			{{#each resume.languages}}
+			<div class="item col-4">
+				{{#if language}}
+				<div class="language">
+					{{language}}
+					{{#if fluency}}	
+						<em> - {{fluency}}</em>
+					{{/if}}
+				</div>
+				{{/if}}
 			</div>
-			{{/if}}
-			{{#if fluency}}
-			<div class="fluency">
-				<em>{{fluency}}</em>
-			</div>
-			{{/if}}
+			{{/each}}
 		</div>
-		{{/each}}
 	</div>
 </section>
 {{/if}}

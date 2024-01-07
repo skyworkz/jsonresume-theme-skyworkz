@@ -1,0 +1,47 @@
+{{#if resume.certificates.length}}
+<section id="certificates">
+	<div class="card p-3 mb-3">
+		<h3 class="my-0">
+			<i class="fa-solid fa-trophy me-2"></i>
+			Certificates
+		</h3>
+		{{#each resume.certificates}}
+    <hr>
+		<div class="item">
+      <div class="row">
+          <div class="col">
+            {{#if name}}
+            <h4 class="name">
+              {{name}}
+            </h4>
+            {{/if}}
+          </div>
+          <div class="col">
+            <div class="date d-flex justify-content-end">
+              <div class="badge">
+                <div class="date">
+                  {{#if date}}
+                  <span class="date">
+                    {{date}}
+                  </span>
+                  {{/if}}
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      {{#if issuer}}
+      <h5 class="issuer">
+        {{issuer}}
+      </h5>
+      {{/if}}
+      {{#if url}}
+        <div class="website">
+          <a href="{{url}}" target="_blank">{{url}}</a>
+        </div>
+      {{/if}}
+    </div>
+		{{/each}}
+	</div>
+</section>
+{{/if}}
