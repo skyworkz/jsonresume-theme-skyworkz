@@ -2,21 +2,21 @@
 <section id="basics">
 	<div class="p-3 mb-3">
 		<div class="row">
-			<div class="col">
+			<div class="col-3">
+				<div class="d-flex flex-column justify-content-center">
 				{{#if image}}
-				<div class="d-flex justify-content-center">
-					<img class="profile-pic my-4" data-src="{{image}}"
+					<img class="profile-pic my-4 align-self-center" data-src="{{image}}"
 							alt="{{name}}"
 							src="{{image}}"
 							itemprop="image">
-				</div>
 				{{/if}}
 				<h1 class="text-center">{{name}}</h1>
 				<h2 class="text-center">{{label}}</h2>
+				</div>
 			</div>
-			<div class="col">
+			<div class="col-3">
 				<div class="contact">
-					<h3 class="mt-4 mb-0">
+					<h3 class="mb-0">
 						<i class="fa-solid fa-location-dot me-2"></i>
 						Contact
 					</h3>
@@ -44,8 +44,8 @@
 				</div>
 			</div>
 			{{#location}}
-				<div class="col">
-					<h3 class="mt-4 mb-0">
+				<div class="col-3">
+					<h3 class="mb-0">
 						<i class="fa-solid fa-location-dot me-2"></i>
 						Location
 					</h3>
@@ -69,10 +69,10 @@
 						{{/if}}
 					</section>
 					</div>
-				{{/location}}
-				{{#if profiles.length}}
-				<div class="col">
-					<h3 class="mt-4 mb-0">
+			{{/location}}
+			{{#if profiles.length}}
+				<div class="col-3">
+					<h3 class="mb-0">
 						<i class="fa-solid fa-globe me-2"></i>
 						Profiles
 					</h3>
