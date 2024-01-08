@@ -43,8 +43,8 @@
 					{{/if}}
 				</div>
 			</div>
-			<div class="col">
-				{{#location}}
+			{{#location}}
+				<div class="col">
 					<h3 class="mt-4 mb-0">
 						<i class="fa-solid fa-location-dot me-2"></i>
 						Location
@@ -68,34 +68,35 @@
 							{{countryCode}}
 						{{/if}}
 					</section>
-					{{/location}}
-			</div>
-			<div class="col">
-				{{#if profiles.length}}
-				<h3 class="mt-4 mb-0">
-					<i class="fa-solid fa-globe me-2"></i>
-					Profiles
-				</h3>
-				<hr class="mt-2">
-				<section id="profiles">
-					<div class="d-flex justify-content-start">
-						{{#each profiles}}
-							<div class="item">
-								{{#if network}}
-									<a class="d-block text-center" href="{{url}}" target="_blank">
-										{{#network-fa-icon network}}{{/network-fa-icon}}
-									</a>
-								{{/if}}
-								{{#if username}}
-									<a class="d-block text-center" href="{{url}}" target="_blank">
-										{{username}}
-									</a>
-								{{/if}}
-								</a>
-							</div>
-						{{/each}}
 					</div>
-				</section>
+				{{/location}}
+				{{#if profiles.length}}
+				<div class="col">
+					<h3 class="mt-4 mb-0">
+						<i class="fa-solid fa-globe me-2"></i>
+						Profiles
+					</h3>
+					<hr class="mt-2">
+					<section id="profiles">
+						<div class="d-flex justify-content-start">
+							{{#each profiles}}
+								<div class="item">
+									{{#if network}}
+										<a class="d-block text-center" href="{{url}}" target="_blank">
+											{{#network-fa-icon network}}{{/network-fa-icon}}
+										</a>
+									{{/if}}
+									{{#if username}}
+										<a class="d-block text-center" href="{{url}}" target="_blank">
+											{{username}}
+										</a>
+									{{/if}}
+									</a>
+								</div>
+							{{/each}}
+						</div>
+					</section>
+				</div>
 				{{/if}}
 			</div>
 		</div>
