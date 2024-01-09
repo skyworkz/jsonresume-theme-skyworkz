@@ -97,6 +97,10 @@ em {
 	letter-spacing: 0px;
 }
 
+#basics .contact .item {
+	line-height: 30px;
+}
+
 #profiles a {
 	color: #666;
 	text-decoration: none;
