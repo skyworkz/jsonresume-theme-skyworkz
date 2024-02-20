@@ -143,3 +143,15 @@ em {
 .badge {
 	background-color: rgb(75, 87, 145);
 }
+
+.keep-together {
+    page-break-inside: avoid;
+}
+
+.break-before {
+    page-break-before: always;
+}
+
+.break-after {
+    page-break-after: always;
+}
